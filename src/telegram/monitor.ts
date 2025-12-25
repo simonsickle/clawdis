@@ -45,7 +45,7 @@ export async function monitorTelegramProvider(opts: MonitorTelegramOpts = {}) {
 
   // Set up heartbeat timer for Telegram
   let heartbeatTimer: NodeJS.Timeout | null = null;
-  const heartbeatMinutes = cfg.inbound?.agent?.heartbeatMinutes;
+  const heartbeatMinutes = cfg.agent?.heartbeatMinutes;
   const allowFrom = cfg.telegram?.allowFrom;
 
   // Use first allowFrom as heartbeat target (owner's chat)
